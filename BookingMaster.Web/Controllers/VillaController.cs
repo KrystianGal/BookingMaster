@@ -1,4 +1,5 @@
-﻿using BookingMaster.Infrastructure.Data;
+﻿using BookingMaster.Domain.Entities;
+using BookingMaster.Infrastructure.Data;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookingMaster.Web.Controllers
@@ -21,6 +22,14 @@ namespace BookingMaster.Web.Controllers
         public IActionResult Create()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(Villa obj)
+        {
+            _db.Villas.Add(obj);
+            _db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
     }
