@@ -5,6 +5,12 @@ VisualStudioVersion = 17.10.35004.147
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingMaster.Web", "BookingMaster.Web\BookingMaster.Web.csproj", "{2A4ED239-38AE-4636-B77C-F9EB5374EE92}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingMaster.Domain", "BookingMaster.Domain\BookingMaster.Domain.csproj", "{C433ED20-FD21-4FCB-9115-109C989DEDFD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingMaster.Application", "BookingMaster.Application\BookingMaster.Application.csproj", "{0EC74813-478F-41E8-9EAD-AB83F16D82F9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingMaster.Infrastructure", "BookingMaster.Infrastructure\BookingMaster.Infrastructure.csproj", "{7C412A69-FB7E-431A-AE90-8DB3653FB3BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +21,18 @@ Global
 		{2A4ED239-38AE-4636-B77C-F9EB5374EE92}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2A4ED239-38AE-4636-B77C-F9EB5374EE92}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2A4ED239-38AE-4636-B77C-F9EB5374EE92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C433ED20-FD21-4FCB-9115-109C989DEDFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C433ED20-FD21-4FCB-9115-109C989DEDFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C433ED20-FD21-4FCB-9115-109C989DEDFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C433ED20-FD21-4FCB-9115-109C989DEDFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EC74813-478F-41E8-9EAD-AB83F16D82F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EC74813-478F-41E8-9EAD-AB83F16D82F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EC74813-478F-41E8-9EAD-AB83F16D82F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EC74813-478F-41E8-9EAD-AB83F16D82F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C412A69-FB7E-431A-AE90-8DB3653FB3BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C412A69-FB7E-431A-AE90-8DB3653FB3BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C412A69-FB7E-431A-AE90-8DB3653FB3BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C412A69-FB7E-431A-AE90-8DB3653FB3BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
