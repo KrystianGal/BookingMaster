@@ -13,7 +13,7 @@ namespace BookingMaster.Domain.Entities
         [MaxLength(50)]
         public required string Name { get; set; }
         public string? Description { get; set; }
-        [Display(Name = "Price per night")]
+        [Display(Name = "Cena za noc")]
         [Range(10,10000)]
         public double Price { get; set; }
         public int Sqft { get; set; }

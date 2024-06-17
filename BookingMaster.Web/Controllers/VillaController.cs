@@ -29,14 +29,14 @@ namespace BookingMaster.Web.Controllers
         {
             if (obj.Name == obj.Description)
             {
-                ModelState.AddModelError("name", "The descriptiob cannot exactly match the Name.");
+                ModelState.AddModelError("name", "Nieprawidłowy opis.");
             }
             if (ModelState.IsValid)
             {
                 _db.Villas.Add(obj);
                 _db.SaveChanges();
-                TempData["success"] = "The villa has been created successfully";
-                return RedirectToAction("Index");
+                TempData["success"] = "Obiekt został utworzony prawidłowo";
+                return RedirectToAction(nameof(Index));
             }
             return View();
         }
@@ -64,8 +64,8 @@ namespace BookingMaster.Web.Controllers
             {
                 _db.Villas.Add(obj);
                 _db.SaveChanges();
-                TempData["success"] = "The villa has been updated successfully";
-                return RedirectToAction("Index");
+                TempData["success"] = "Obiekt został edytowany prawidłowo";
+                return RedirectToAction(nameof(Index));
             }
             return View();
         }
@@ -90,10 +90,10 @@ namespace BookingMaster.Web.Controllers
             {
                 _db.Villas.Remove(objFromDb);
                 _db.SaveChanges();
-                TempData["success"] = "The villa has been deleten successfully.";
-                return RedirectToAction("Index");
+                TempData["success"] = "Obiekt został usunięty.";
+                return RedirectToAction(nameof(Index));
             }
-            TempData["error"] = "The villa could not be deleted.";
+            TempData["error"] = "Obiekt nie może zostać usunięty.";
             return View();
         }
 
