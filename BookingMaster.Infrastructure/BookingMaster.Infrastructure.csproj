@@ -18,8 +18,8 @@
     </PackageReference>
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\BookingMaster.Domain\BookingMaster.Domain.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="..\BookingMaster.Application\BookingMaster.Application.csproj" />
+	</ItemGroup>
 
 </Project>
