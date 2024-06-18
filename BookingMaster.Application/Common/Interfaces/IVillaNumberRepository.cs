@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BookingMaster.Application.Common.Interfaces
 {
-    public interface IVillaRepository : IRepository<Villa>
+    public interface IVillaNumberRepository : IRepository<VillaNumber>
     {
-        void Update(Villa entity);
-       
+        void Update(VillaNumber entity);
+        
     }
 }

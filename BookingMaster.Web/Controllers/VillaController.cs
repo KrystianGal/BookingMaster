@@ -9,14 +9,14 @@ namespace BookingMaster.Web.Controllers
 
     public class VillaController : Controller
     {
-        private readonly IVillaRepository _villaRepo;
-        public VillaController(IVillaRepository villaRepo)
+        private readonly IUnitOfWork _unitOfWork;
+        public VillaController(IUnitOfWork unitOfWork)
         {
-            _villaRepo = villaRepo;
+            _unitOfWork = unitOfWork;
         }
         public IActionResult Index()
         {
-            var villas = _villaRepo.GetAll();
+            var villas = _unitOfWork.Villa.GetAll();
             return View(villas);
         }
 
@@ -34,8 +34,8 @@ namespace BookingMaster.Web.Controllers
             }
             if (ModelState.IsValid)
             {
-                _villaRepo.Add(obj);
-                _villaRepo.Save();
+                _unitOfWork.Villa.Add(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Obiekt został utworzony prawidłowo";
                 return RedirectToAction(nameof(Index));
             }
@@ -44,7 +44,7 @@ namespace BookingMaster.Web.Controllers
 
         public IActionResult Update(int villaId)
         {
-            Villa? obj = _villaRepo.Get(u=>u.Id == villaId);
+            Villa? obj = _unitOfWork.Villa.Get(u=>u.Id == villaId);
            // Villa? obj = _db.Villas.Find(villaId);
 
           //  var VillaList = _db.Villas.Where(u => u.Price > 50 && u.Occupancy > 0);
@@ -63,8 +63,8 @@ namespace BookingMaster.Web.Controllers
            
             if (ModelState.IsValid && obj.Id>0)
             {
-                _villaRepo.Update(obj);
-                _villaRepo.Save();
+                _unitOfWork.Villa.Update(obj);
+                _unitOfWork.Save();
                 TempData["success"] = "Obiekt został edytowany prawidłowo";
                 return RedirectToAction(nameof(Index));
             }
@@ -73,7 +73,7 @@ namespace BookingMaster.Web.Controllers
 
         public IActionResult Delete(int villaId)
         {
-            Villa? obj = _villaRepo.Get(u => u.Id == villaId);
+            Villa? obj = _unitOfWork.Villa.Get(u => u.Id == villaId);
            
             if (obj is null)
             {
@@ -86,11 +86,11 @@ namespace BookingMaster.Web.Controllers
         [HttpPost]
         public IActionResult Delete(Villa obj)
         {
-            Villa? objFromDb = _villaRepo.Get(u => u.Id==obj.Id);
+            Villa? objFromDb = _unitOfWork.Villa.Get(u => u.Id==obj.Id);
             if (objFromDb is not null)
             {
-                _villaRepo.Remove(objFromDb);
-                _villaRepo.Save();
+                _unitOfWork.Villa.Remove(objFromDb);
+                _unitOfWork.Save();
                 TempData["success"] = "Obiekt został usunięty.";
                 return RedirectToAction(nameof(Index));
             }
