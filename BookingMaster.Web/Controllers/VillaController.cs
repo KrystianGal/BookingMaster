@@ -1,12 +1,13 @@
 ﻿using BookingMaster.Application.Common.Interfaces;
 using BookingMaster.Domain.Entities;
 using BookingMaster.Infrastructure.Data;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace BookingMaster.Web.Controllers
 {
 
-
+    [Authorize]
     public class VillaController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;

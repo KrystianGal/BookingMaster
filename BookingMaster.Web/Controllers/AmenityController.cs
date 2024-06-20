@@ -1,7 +1,9 @@
 ﻿using BookingMaster.Application.Common.Interfaces;
+using BookingMaster.Application.Common.Utility;
 using BookingMaster.Domain.Entities;
 using BookingMaster.Infrastructure.Data;
 using BookingMaster.Web.ViewModels;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 namespace BookingMaster.Web.Controllers
 {
 
-
+    [Authorize(Roles =SD.Role_Admin)]
     public class AmenityController : Controller
     {
         private readonly IUnitOfWork _unitOfWork;
