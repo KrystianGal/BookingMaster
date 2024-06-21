@@ -38,10 +38,10 @@ namespace BookingMaster.Domain.Entities
         public DateTime BookingDate { get; set; }
 
         [Required]
-        public DateTime ChechInDate { get; set; }
+        public DateOnly CheckInDate { get; set; }
 
         [Required]
-        public DateTime ChechOutDate { get; set; }
+        public DateOnly CheckOutDate { get; set; }
 
         public bool IsPaymentSuccessful { get; set; } = false;
         public DateTime PaymentDate { get; set; }
