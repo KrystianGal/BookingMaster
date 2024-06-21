@@ -18,7 +18,7 @@ namespace BookingMaster.Domain.Entities
         public ApplicationUser User { get; set; }
 
         [Required]
-        public string VillaId { get; set; }
+        public int VillaId { get; set; }
         [ForeignKey("VillaId")]
         public Villa Villa { get; set; }
 
