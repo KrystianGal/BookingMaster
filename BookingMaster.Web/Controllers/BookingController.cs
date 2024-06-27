@@ -21,7 +21,7 @@ namespace BookingMaster.Web.Controllers
                 Nights = nights,
                 CheckOutDate = checkInDate.AddDays(nights),
             };
-            return View(nights);
+            return View(booking);
         }
     }
 }
