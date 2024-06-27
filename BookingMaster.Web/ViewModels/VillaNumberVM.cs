@@ -8,6 +8,6 @@ namespace BookingMaster.Web.ViewModels
     {
         public VillaNumber? VillaNumber { get; set; }
         [ValidateNever]
-        public IEnumerable<SelectListItem> VillaList { get; set; }
+        public IEnumerable<SelectListItem>? VillaList { get; set; }
     }
 }
